@@ -4,7 +4,7 @@
       "https://localhost:7174/BlackService.asmx"
     ],
     "collectionTypes": [
-      "System.Array",
+      "System.Collections.Generic.List`1",
       "System.Collections.Generic.Dictionary`2"
     ],
     "namespaceMappings": [

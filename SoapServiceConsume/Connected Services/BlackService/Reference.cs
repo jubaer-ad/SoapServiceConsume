@@ -92,10 +92,10 @@ namespace BlackService
     {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBlackService/GetPersons", ReplyAction="http://tempuri.org/IBlackService/GetPersonsResponse")]
-        BlackService.BlackDataContract[] GetPersons();
+        System.Collections.Generic.List<BlackService.BlackDataContract> GetPersons();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBlackService/GetPersons", ReplyAction="http://tempuri.org/IBlackService/GetPersonsResponse")]
-        System.Threading.Tasks.Task<BlackService.BlackDataContract[]> GetPersonsAsync();
+        System.Threading.Tasks.Task<System.Collections.Generic.List<BlackService.BlackDataContract>> GetPersonsAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBlackService/GetPerson", ReplyAction="http://tempuri.org/IBlackService/GetPersonResponse")]
         BlackService.BlackDataContract GetPerson();
@@ -166,12 +166,12 @@ namespace BlackService
         {
         }
         
-        public BlackService.BlackDataContract[] GetPersons()
+        public System.Collections.Generic.List<BlackService.BlackDataContract> GetPersons()
         {
             return base.Channel.GetPersons();
         }
         
-        public System.Threading.Tasks.Task<BlackService.BlackDataContract[]> GetPersonsAsync()
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<BlackService.BlackDataContract>> GetPersonsAsync()
         {
             return base.Channel.GetPersonsAsync();
         }
